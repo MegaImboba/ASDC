@@ -42,5 +42,6 @@ g++ -std=c++17 -o hashtable lab6.cpp./hashtable
     std::cout << "Value at key1 after removal: " << (find(table, "key1") ? std::to_string(*find(table, "key1")) : "not found") << std::endl;  // Output: not found
 
     return 0;
-} ```
+} 
+```
 ![Пример работы программы](sample.png)
