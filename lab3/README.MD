@@ -68,4 +68,31 @@ int main() {
     return 0;
 }
 ```
+Для двусвязного списка
+```cpp
+int main() {
+        LinkedList list;
+    Node* n1 = insertAfter(&list, nullptr, 10);
+    Node* n2 = insertAfter(&list, n1, 20);
+    Node* n3 = insertBefore(&list, n1, 5);
+
+    assert(find(&list, 10) == n1);
+    assert(find(&list, 20) == n2);
+    assert(find(&list, 5) == n3);
+
+    remove(&list, n1);
+    assert(find(&list, 10) == nullptr);
+
+    try {
+        assertNoCycles(&list);
+        std::cout << "No cycles detected." << std::endl;
+    } catch (std::exception& e) {
+        std::cout << e.what() << std::endl;
+    }
+    return 0;
+}
+```
+## Для односвязного списка
 ![Пример работы программы](sample.png)
+## для двусвязного списка
+![Пример работы программы2](sample1.png)
